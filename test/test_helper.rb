@@ -1,6 +1,9 @@
 ENV["RAILS_ENV"] ||= "test"
 require_relative "../config/environment"
 require "rails/test_help"
+require "webmock/minitest"
+
+Dir["#{File.dirname(__FILE__)}/helpers/**/*.rb"].each { |f| require f }
 
 module ActiveSupport
   class TestCase

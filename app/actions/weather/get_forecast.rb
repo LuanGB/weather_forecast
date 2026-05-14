@@ -30,6 +30,8 @@ module Weather
 
       response = OpenWeather::Forecast.get_forecast(lat:, lon:, unit:)
 
+      return Failure("Failed to fetch forecast") if response.failure?
+
       Rails.cache.write(
         "forecast/#{zip}/#{unit}",
         response.value!,

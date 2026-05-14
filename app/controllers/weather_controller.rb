@@ -9,7 +9,12 @@ class WeatherController < ApplicationController
       @unit = weather_params[:unit]
       render :show
     else
-      flash.now[:error] = result.failure
+      error_message = if result.failure.respond_to?(:errors)
+        result.failure.errors.to_h.map { |k, v| "#{k} #{v.join(", ")}" }.join(", ")
+      else
+          result.failure
+      end
+      flash.now[:error] = error_message
       render :show, status: :unprocessable_entity
     end
   end

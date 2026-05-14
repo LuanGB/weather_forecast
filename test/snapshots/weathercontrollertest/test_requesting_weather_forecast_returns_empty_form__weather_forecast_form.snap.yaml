@@ -1,0 +1,35 @@
+--- "<!DOCTYPE html>\n<html>\n  <head>\n    <title>Weather</title>\n    <meta name=\"viewport\"
+  content=\"width=device-width,initial-scale=1\">\n    <meta name=\"apple-mobile-web-app-capable\"
+  content=\"yes\">\n    <meta name=\"mobile-web-app-capable\" content=\"yes\">\n    \n
+  \   \n\n    \n\n\n    <link rel=\"icon\" href=\"/icon.png\" type=\"image/png\">\n
+  \   <link rel=\"icon\" href=\"/icon.svg\" type=\"image/svg+xml\">\n    <link rel=\"apple-touch-icon\"
+  href=\"/icon.png\">\n\n    <link rel=\"stylesheet\" href=\"/assets/application-8b441ae0.css\"
+  data-turbo-track=\"reload\" />\n    <script type=\"importmap\" data-turbo-track=\"reload\">{\n
+  \ \"imports\": {\n    \"application\": \"/assets/application-bfcdf840.js\",\n    \"@hotwired/turbo-rails\":
+  \"/assets/turbo.min-9fd88cd5.js\",\n    \"@hotwired/stimulus\": \"/assets/stimulus.min-4b1e420e.js\",\n
+  \   \"@hotwired/stimulus-loading\": \"/assets/stimulus-loading-1fc53fe7.js\",\n
+  \   \"controllers/application\": \"/assets/controllers/application-3affb389.js\",\n
+  \   \"controllers/hello_controller\": \"/assets/controllers/hello_controller-708796bd.js\",\n
+  \   \"controllers\": \"/assets/controllers/index-ee64e1f1.js\"\n  }\n}</script>\n<link
+  rel=\"modulepreload\" href=\"/assets/application-bfcdf840.js\">\n<link rel=\"modulepreload\"
+  href=\"/assets/turbo.min-9fd88cd5.js\">\n<link rel=\"modulepreload\" href=\"/assets/stimulus.min-4b1e420e.js\">\n<link
+  rel=\"modulepreload\" href=\"/assets/stimulus-loading-1fc53fe7.js\">\n<link rel=\"modulepreload\"
+  href=\"/assets/controllers/application-3affb389.js\">\n<link rel=\"modulepreload\"
+  href=\"/assets/controllers/hello_controller-708796bd.js\">\n<link rel=\"modulepreload\"
+  href=\"/assets/controllers/index-ee64e1f1.js\">\n<script type=\"module\">import
+  \"application\"</script>\n  </head>\n\n  <body>\n    <h1>Weather Forecast</h1>\n\n<form
+  action=\"/\" accept-charset=\"UTF-8\" method=\"get\">\n  <div class=\"field\">\n
+  \   <label for=\"line_1\">Address Line 1</label>\n    <input type=\"text\" name=\"line_1\"
+  id=\"line_1\" />\n  </div>\n\n  <div class=\"field\">\n    <label for=\"line_2\">Address
+  Line 2</label>\n    <input type=\"text\" name=\"line_2\" id=\"line_2\" />\n  </div>\n\n
+  \ <div class=\"field\">\n    <label for=\"city\">City</label>\n    <input type=\"text\"
+  name=\"city\" id=\"city\" />\n  </div>\n\n  <div class=\"field\">\n    <label for=\"state\">State</label>\n
+  \   <input type=\"text\" name=\"state\" id=\"state\" />\n  </div>\n\n  <div class=\"field\">\n
+  \   <label for=\"zip\">Zip Code</label>\n    <input type=\"text\" name=\"zip\" id=\"zip\"
+  />\n  </div>\n\n  <div class=\"field\">\n    <label for=\"country\">Country</label>\n
+  \   <input type=\"text\" name=\"country\" id=\"country\" />\n  </div>\n\n  <div
+  class=\"field\">\n    <label for=\"unit\">Temperature Unit</label>\n    <select
+  name=\"unit\" id=\"unit\"><option value=\"imperial\">Fahrenheit</option>\n<option
+  value=\"metric\">Celsius</option></select>\n  </div>\n\n  <div class=\"actions\">\n
+  \   <input type=\"submit\" name=\"commit\" value=\"Get Forecast\" data-disable-with=\"Get
+  Forecast\" />\n  </div>\n  \n</form>\n\n\n  </body>\n</html>\n"
