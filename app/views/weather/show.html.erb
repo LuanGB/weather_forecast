@@ -1,0 +1,61 @@
+<h1>Weather Forecast</h1>
+
+<%= form_with url: root_path, method: :get, local: true do |form| %>
+  <div class="field">
+    <%= form.label :line_1, "Address Line 1" %>
+    <%= form.text_field :line_1 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :line_2, "Address Line 2" %>
+    <%= form.text_field :line_2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :city, "City" %>
+    <%= form.text_field :city %>
+  </div>
+
+  <div class="field">
+    <%= form.label :state, "State" %>
+    <%= form.text_field :state %>
+  </div>
+
+  <div class="field">
+    <%= form.label :zip, "Zip Code" %>
+    <%= form.text_field :zip %>
+  </div>
+
+  <div class="field">
+    <%= form.label :country, "Country" %>
+    <%= form.text_field :country %>
+  </div>
+
+  <div class="field">
+    <%= form.label :unit, "Temperature Unit" %>
+    <%= form.select :unit, options_for_select([["Fahrenheit", "imperial"], ["Celsius", "metric"]], selected: params[:unit]) %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit "Get Forecast" %>
+  </div>
+  
+<% end %>
+
+<% if @forecast.present? %>
+  <h2>Forecast for <%= @forecast[:name] %></h2>
+  <p><%= @forecast[:weather].first[:description].capitalize %></p>
+  <p>AverageTemperature: <%= @forecast[:main][:temp].round %><%= @unit == "imperial" ? "°F" : "°C" %></p>
+  <p>Feels Like: <%= @forecast[:main][:feels_like].round %><%= @unit == "imperial" ? "°F" : "°C" %></p>
+  <p>Min Temperature: <%= @forecast[:main][:temp_min].round %><%= @unit == "imperial" ? "°F" : "°C" %></p>
+  <p>Max Temperature: <%= @forecast[:main][:temp_max].round %><%= @unit == "imperial" ? "°F" : "°C" %></p>
+  <p>Humidity: <%= @forecast[:main][:humidity] %>%</p>
+  <p>Wind Speed: <%= @forecast[:wind][:speed] %> <%= @unit == "imperial" ? "mph" : "m/s" %></p>
+  <p>Wind Direction: <span style="display: inline-block; transform: rotate(<%= @forecast[:wind][:deg] %>deg);">↑</span> (<%= @forecast[:wind][:deg] %>°)</p>
+  <p>Cached? <%= @forecast[:cached] ? "Yes" : "No" %></p>
+<% end %>
+
+<% if flash.now[:error].present? %>
+  <h2>Error</h2>
+  <p style="color: red;"><%= flash.now[:error] %></p>
+<% end %>
