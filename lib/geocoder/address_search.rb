@@ -2,12 +2,12 @@ class Geocoder::AddressSearch
   include Dry::Monads[:result]
   def initialize; @client = Geocoder; end
 
-  def self.get_geo_details(line_1: nil, line_2: nil, city: nil, state: nil, country: nil)
-    new.get_geo_details(line_1:, line_2:, city:, state:, country:)
+  def self.get_geo_details(address)
+    new.get_geo_details(address)
   end
 
-  def get_geo_details(line_1:, line_2:, city:, state:, country:)
-    data = @client.search([ line_1, line_2, city, state, country ].join(","))
+  def get_geo_details(address)
+    data = @client.search([ address.line_1, address.line_2, address.city, address.state, address.country ].join(","))
 
     return Failure("No results found for the provided address") if data.empty?
 

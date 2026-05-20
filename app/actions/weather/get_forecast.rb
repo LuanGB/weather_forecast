@@ -9,7 +9,9 @@ module Weather
     def call(input)
       attrs = (step validate_input(input)).to_h
 
-      geo_details = step fetch_geo_details(attrs)
+      address = Address.new(**attrs.slice(:line_1, :line_2, :city, :state, :country, :zip))
+
+      geo_details = step fetch_geo_details(address)
 
       step fetch_forecast(geo_details[:lat], geo_details[:lon], attrs[:zip] || geo_details[:zip], attrs[:unit])
     end
@@ -20,8 +22,8 @@ module Weather
       GetForecastContract.new.call(input).to_monad
     end
 
-    def fetch_geo_details(attrs)
-      Geocoder::AddressSearch.get_geo_details(**attrs.slice(:line_1, :line_2, :city, :state, :country))
+    def fetch_geo_details(address)
+      Geocoder::AddressSearch.get_geo_details(address)
     end
 
     def fetch_forecast(lat, lon, zip, unit)

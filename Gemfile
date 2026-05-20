@@ -43,6 +43,7 @@ gem "thruster", require: false
 gem "dry-operation"
 gem "dry-validation"
 gem "dry-monads"
+gem "dry-struct"
 
 gem "faraday"
 gem "geocoder"
