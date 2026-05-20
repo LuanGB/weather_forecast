@@ -23,7 +23,7 @@ module Weather
     end
 
     def fetch_geo_details(address)
-      Geocoder::AddressSearch.get_geo_details(address)
+      Geolocation::AddressSearch.get_geo_details(address)
     end
 
     def fetch_forecast(lat, lon, zip, unit)

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Weather</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    
+    
+
+    
+
+
+    <link rel="icon" href="/icon.png" type="image/png">
+    <link rel="icon" href="/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/icon.png">
+
+    <link rel="stylesheet" href="/assets/application-8b441ae0.css" data-turbo-track="reload" />
+    <script type="importmap" data-turbo-track="reload">{
+  "imports": {
+    "application": "/assets/application-bfcdf840.js",
+    "@hotwired/turbo-rails": "/assets/turbo.min-9fd88cd5.js",
+    "@hotwired/stimulus": "/assets/stimulus.min-4b1e420e.js",
+    "@hotwired/stimulus-loading": "/assets/stimulus-loading-1fc53fe7.js",
+    "controllers/application": "/assets/controllers/application-3affb389.js",
+    "controllers/hello_controller": "/assets/controllers/hello_controller-708796bd.js",
+    "controllers": "/assets/controllers/index-ee64e1f1.js"
+  }
+}</script>
+<link rel="modulepreload" href="/assets/application-bfcdf840.js">
+<link rel="modulepreload" href="/assets/turbo.min-9fd88cd5.js">
+<link rel="modulepreload" href="/assets/stimulus.min-4b1e420e.js">
+<link rel="modulepreload" href="/assets/stimulus-loading-1fc53fe7.js">
+<link rel="modulepreload" href="/assets/controllers/application-3affb389.js">
+<link rel="modulepreload" href="/assets/controllers/hello_controller-708796bd.js">
+<link rel="modulepreload" href="/assets/controllers/index-ee64e1f1.js">
+<script type="module">import "application"</script>
+  </head>
+
+  <body>
+    <h1>Weather Forecast</h1>
+
+<form action="/" accept-charset="UTF-8" method="get">
+  <div class="field">
+    <label for="line_1">Address Line 1</label>
+    <input type="text" name="line_1" id="line_1" />
+  </div>
+
+  <div class="field">
+    <label for="line_2">Address Line 2</label>
+    <input type="text" name="line_2" id="line_2" />
+  </div>
+
+  <div class="field">
+    <label for="city">City</label>
+    <input type="text" name="city" id="city" />
+  </div>
+
+  <div class="field">
+    <label for="state">State</label>
+    <input type="text" name="state" id="state" />
+  </div>
+
+  <div class="field">
+    <label for="zip">Zip Code</label>
+    <input type="text" name="zip" id="zip" />
+  </div>
+
+  <div class="field">
+    <label for="country">Country</label>
+    <input type="text" name="country" id="country" />
+  </div>
+
+  <div class="field">
+    <label for="unit">Temperature Unit</label>
+    <select name="unit" id="unit"><option selected="selected" value="imperial">Fahrenheit</option>
+<option value="metric">Celsius</option></select>
+  </div>
+
+  <div class="actions">
+    <input type="submit" name="commit" value="Get Forecast" data-disable-with="Get Forecast" />
+  </div>
+  
+</form>
+  <h2>Forecast for Natal</h2>
+  <p>Light rain</p>
+  <p>AverageTemperature: 75°F</p>
+  <p>Feels Like: 77°F</p>
+  <p>Min Temperature: 75°F</p>
+  <p>Max Temperature: 76°F</p>
+  <p>Humidity: 94%</p>
+  <p>Wind Speed: 9.22 mph</p>
+  <p>Wind Direction: <span style="display: inline-block; transform: rotate(180deg);">↑</span> (180°)</p>
+  <p>Cached? Yes</p>
+
+
+  </body>
+</html>

@@ -1,4 +1,4 @@
-class Geocoder::AddressSearch
+class Geolocation::AddressSearch
   include Dry::Monads[:result]
   def initialize; @client = Geocoder; end
 
