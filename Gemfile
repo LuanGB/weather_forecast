@@ -69,6 +69,5 @@ group :development do
 end
 
 group :test do
-  gem "minitest-snapshots"
   gem "webmock"
 end
